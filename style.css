@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;700&display=swap");
+
+:root {
+  /* ### Primary */
+
+  --Soft-red: hsl(10, 79%, 65%);
+  --Cyan: hsl(186, 34%, 60%);
+
+  /* ### Neutral */
+
+  --Dark-brown: hsl(25, 47%, 15%);
+  --Medium-brown: hsl(28, 10%, 53%);
+  --Cream: hsl(27, 66%, 92%);
+  --Very-pale-orange: hsl(33, 100%, 98%);
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  text-decoration: none;
+  font-family: "DM Sans", sans-serif;
+}
+body {
+  background-color: var(--Cream);
+  display: flex;
+  place-items: center;
+  min-height: 100vh;
+}
+h1 {
+  font-size: clamp(2.6rem, 3vw, 3.2rem);
+  font-weight: 700;
+  color: var(--Dark-brown);
+}
+h2 {
+  font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+  font-weight: 700;
+  color: var(--Dark-brown);
+}
+h1 span:first-child {
+  display: block;
+  color: var(--Cream);
+  margin-bottom: 5px;
+}
+p,
+h1 span:first-child {
+  font-size: clamp(1.5rem, 1.7vw, 1.8rem);
+  font-weight: 400;
+}
+.flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container {
+  width: clamp(30rem, 90%, 50rem);
+  margin-inline: auto;
+}
+header {
+  background-color: var(--Soft-red);
+  padding: clamp(2rem, 2.5vw, 3rem);
+  margin-bottom: 2rem;
+}
+.balance-header {
+  color: var(--Very-pale-orange);
+}
+header,
+.main-content {
+  padding: clamp(2rem, 2.5vw, 3rem);
+  border-radius: 1rem;
+}
+.main-content {
+  background-color: var(--Very-pale-orange);
+}
+.btn-sort{
+  border: none;
+  color: var(--Very-pale-orange);
+  padding:5px 1rem;
+  border-radius: 5px;
+  font-weight: 700;
+  background-color: var(--Soft-red);
+}
+.btn-sort:is(:hover,:focus){
+  background-color: var(--Cyan);
+  transition: 600ms;
+  cursor: pointer;
+} 
+/* CHART CONTAINER */
+.chart-container {
+  height: 25rem;
+  display: flex;
+
+}
+.chart-box {
+  height: 100%;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  padding-top: 4rem;
+  gap: clamp(1.25rem,1.8vw,2rem);
+
+}
+.chart-box div{
+  width: 100%;
+  height: 100%;
+  row-gap: 1rem;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.chart-box div .bar{
+  background-color: var(--Soft-red);
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  position: relative;
+}
+.chart-box div .bar:hover::before{
+  content: attr(data-set);
+  position: absolute;
+  top: -2.5rem;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: var(--Dark-brown);
+  width: 140%;
+  color: var(--Very-pale-orange);
+  text-align: center;
+  border-radius: 5px;
+  padding: 1rem 0;
+
+}
+.chart-box div .bar:hover{
+  opacity: 0.8;
+  cursor: pointer;
+  transition: 600ms;
+}
+.chart-box div .max{
+  background-color: var(--Cyan);
+}
+
+/* footer */
+footer {
+  border-top: 2px solid var(--Cream);
+  margin-top: 2rem;
+  padding-top: 2rem;
+}
+footer h2 span:first-child {
+  display: block;
+  text-align: right;
+  font-weight: 700;
+}
+footer h2 {
+  align-self: flex-end;
+}
+footer h1 span:first-child,
+footer h2 span:last-child,
+p {
+  font-weight: 400;
+  color: var(--Medium-brown);
+}

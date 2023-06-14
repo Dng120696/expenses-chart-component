@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Expenses chart component</title>
+  </head>
+  <body>
+    <main class="container">
+      <header class="flex">
+        <h1 class="balance-header">
+          <span> My balance </span>
+          <span> $921.48 </span>
+        </h1>
+        <div class="header-logo">
+          <img src="./images/logo.svg" alt="" class="logo" />
+        </div>
+      </header>
+      <section class="main-content">
+        <div class="flex">   
+           <h2 class="content-title">
+            Spending - Last 7 days</h2>
+          <button class="btn-sort">&downarrow; SORT</button>
+        </div>
+    
+        <div class="chart-container">
+          <div class = "chart-box flex">
+          </div>
+        </div>
+        <footer class="flex">
+          <h1 class="balance-footer">
+            <span> Total this month </span>
+            <span> $478.33 </span>
+          </h1>
+          <h2 class="interest-footer">
+            <span> +2.4% </span>
+            <span> from last month </span>
+          </h2>
+        </footer>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
